@@ -10,22 +10,29 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:boundaries/strict",
+    "plugin:boundaries/recommended",
   ],
   settings: {
     "boundaries/elements": [
       {
-        type: "root",
-        pattern: "src/index.ts",
-        mode: "full",
+        type: "hooks",
+        pattern: ["*/hooks/**"],
+        capture: ["parents", "category", "family", "elementName"],
+      },
+      {
+        type: "helpers",
+        pattern: ["*/helpers/**"],
+        capture: ["parents", "category", "family", "elementName"],
       },
       {
         type: "components",
-        pattern: "components/*",
+        pattern: ["*/components/!(helpers|hooks)"],
+        capture: ["parents", "category", "family", "elementName"],
       },
       {
-        type: "modules",
-        pattern: "modules/*",
+        type: "features",
+        pattern: "features/*",
+        capture: ["parents", "category", "family", "elementName"],
       },
     ],
     "boundaries/include": ["src/**/*.*"],
@@ -44,23 +51,38 @@ module.exports = {
       },
     ],
     "no-undef": "error",
-    "no-unused-vars": ["error", { vars: "all", args: "after-used", ignoreRestSiblings: false }],
+    "no-unused-vars": 0,
     "boundaries/element-types": [
       2,
       {
         default: "disallow",
         rules: [
           {
-            from: "root",
-            allow: ["modules"],
-          },
-          {
             from: "components",
-            allow: ["components"],
+            allow: [
+              ["components", { parents: "${parents}" }],
+              ["components", { parents: "${category}" }],
+              ["helpers", { parents: "${parents}" }],
+              ["helpers", { parents: "${category}" }],
+              ["hooks", { parents: "${parents}" }],
+              ["hooks", { parents: "${category}" }],
+              ["features", { parents: "${parents}" }],
+            ],
+            disallow: [["components", { family: "components" }]],
           },
           {
-            from: "modules",
-            allow: ["components"],
+            from: "features",
+            allow: [
+              ["components", { parents: "${parents}" }],
+              ["helpers", { parents: "${parents}" }],
+              ["hooks", { parents: "${parents}" }],
+              "features",
+            ],
+            disallow: [
+              ["components", { family: "components" }],
+              ["helpers", { family: "helpers" }],
+              ["hooks", { family: "hooks" }],
+            ],
           },
         ],
       },

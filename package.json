@@ -1,14 +1,14 @@
 {
-  "name": "epb-ts-example",
+  "name": "eslint-plugin-boundaries-demo-structure",
   "private": true,
   "version": "1.0.0",
-  "description": "eslint-plugin-boundaries TypeScript configuration example",
+  "description": "eslint-plugin-boundaries TypeScript demo structure",
   "author": "Javier Brea",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "ts-patch install -s",
-    "lint": "eslint .",
+    "lint": "cross-env ESLINT_PLUGIN_BOUNDARIES_DEBUG=1 eslint .",
     "build": "tsc",
     "run:built": "cross-env node dist/index.js",
     "test": "jest"

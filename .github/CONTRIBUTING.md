@@ -2,43 +2,49 @@
 
 First off, thanks for taking the time to contribute!
 
-The following is a set of guidelines for contributing to this project. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+The following is a set of guidelines for contributing to this project. These are mostly guidelines, not rules. Use your
+best judgment, and feel free to propose changes to this document in a pull request.
 
 #### Table Of Contents
 
 * [Code of Conduct](#code-of-conduct)
 * [Project governance](#project-governance)
-  * [Rules](#rules)
-  * [Releases](#releases)
-  * [Changes to this arrangement](#changes-to-this-arrangement)
+    * [Rules](#rules)
+    * [Releases](#releases)
+    * [Changes to this arrangement](#changes-to-this-arrangement)
 * [Pull Requests](#pull-requests)
 * [Styleguides](#styleguides)
-  * [Git Commit Messages](#git-commit-messages)
+    * [Git Commit Messages](#git-commit-messages)
 * [Developer's certificate of origin](#developers-certificate-of-origin)
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+This project and everyone participating in it is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By
+participating, you are expected to uphold this code.
 
 ## Project Governance
 
-Individuals making significant and valuable contributions are given commit-access to the project to contribute as they see fit.
+Individuals making significant and valuable contributions are given commit-access to the project to contribute as they
+see fit.
 
 ### Rules
 
 There are a few basic ground-rules for contributors:
 
 1. **No `--force` pushes** or modifying the Git history in any way.
-2. **All modifications** should be subject to a **pull request** to solicit feedback from other contributors. The base branch of the pull request should be the `release` branch.
-3. **All changes** to this project should be documented in the GHANGELOG.md file in the `unreleased` chapter until a formal release is declared.
+2. **All modifications** should be subject to a **pull request** to solicit feedback from other contributors. The base
+   branch of the pull request should be the `release` branch.
+3. **All changes** to this project should be documented in the GHANGELOG.md file in the `unreleased` chapter until a
+   formal release is declared.
 
 ### Releases
 
-Declaring formal releases remains the prerogative of the project maintainer. 
+Declaring formal releases remains the prerogative of the project maintainer.
 
 ### Changes to this arrangement
 
-This document may also be subject to pull-requests or changes by contributors where you believe you have something valuable to add or change.
+This document may also be subject to pull-requests or changes by contributors where you believe you have something
+valuable to add or change.
 
 ## Pull Requests
 
@@ -46,7 +52,8 @@ This document may also be subject to pull-requests or changes by contributors wh
 * Do not include issue numbers in the PR title.
 * All enhancements and bug fixes must be accompanied with all needed new related regression test.
 * Coverage of unit tests must remain 100%.
-* Run tests often. Tests are ran automatically when a PR is opened, but you still need to run them locally before creating it.
+* Run tests often. Tests are ran automatically when a PR is opened, but you still need to run them locally before
+  creating it.
 * Document new features, or update documentation if changes affect to it.
 
 ## Styleguides

@@ -1,8 +1,11 @@
 # eslint-plugin-boundaries TypeScript configuration example
 
-This repository contains an example of the eslint plugin [`eslint-plugin-boundaries`](https://github.com/javierbrea/eslint-plugin-boundaries) usage with [TypeScript](https://www.typescriptlang.org/), including custom TS paths.
+This repository contains an example of the eslint
+plugin [`eslint-plugin-boundaries`](https://github.com/javierbrea/eslint-plugin-boundaries) usage
+with [TypeScript](https://www.typescriptlang.org/), including custom TS paths.
 
-The documentation of the plugin itself contains [`TypeScript` configuration instructions](https://github.com/javierbrea/eslint-plugin-boundaries#usage-with-typescript).
+The documentation of the plugin itself
+contains [`TypeScript` configuration instructions](https://github.com/javierbrea/eslint-plugin-boundaries#usage-with-typescript).
 
 ## Installation
 
@@ -14,7 +17,8 @@ npm i
 
 ## Eslint execution
 
-Note that __the lint execution will return an error, but it is intentional__, as the `src/modules/module-b` element contains a forbidden import in order to check that the plugin works properly.
+Note that __the lint execution will return an error, but it is intentional__, as the `src/modules/module-b` element
+contains a forbidden import in order to check that the plugin works properly.
 
 ```bash
 npm run lint
